@@ -8,14 +8,6 @@ terminal-width: "100%"
 terminal-height: "100%"
 terminal-border: "0"
 
-+ image {
-    top = 12%
-    left = 50%-80
-    width = 125
-    height = 125
-    file = "logo.png"
-}
-
 + label {
     text = "Choose a boot option"
     color = "#F3F3F3"
@@ -63,5 +55,5 @@ terminal-border: "0"
 	left = 50%-240
 	width = 480
 	height = 42
-	file = "assets/menu.png"
+	file = "menu.png"
 }
