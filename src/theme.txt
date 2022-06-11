@@ -1,6 +1,7 @@
 desktop-image: "avdanos-bg.jpg"
 
 title-text: " "
+message-font: "DejaVu Sans Regular 12"
 message-color: "#757575"
 terminal-left: "0"
 terminal-top: "0"
@@ -16,6 +17,7 @@ terminal-border: "0"
     align = "center"
     width = 160
     height = 40
+    font = "DejaVu Sans Regular 10"
 }
 
 + boot_menu {
@@ -24,13 +26,15 @@ terminal-border: "0"
     top = 30%
     height = 40%
     icon_width = 32
-    icon_height =32
+    icon_height = 32
+    item_font = "DejaVu Sans Regular 12"
     item_height = 48
     item_padding = 8
     item_icon_space = 12
     item_spacing = 8
     menu_pixmap_style = "boot_menu_*.png"
     item_color = "#EDEDED"
+    selected_item_font = "DejaVu Sans Bold 14"
     selected_item_color= "#DDDDDD"
     selected_item_pixmap_style= "select_bkg_*.png"
     scrollbar = true
@@ -44,6 +48,7 @@ terminal-border: "0"
 	width = 100%
 	top = 100%
 	height = 23
+    font = "DejaVu Sans Regular 12"
 	show_text = true
 	text_color = "255, 255, 255"
 	bar_style = "progress_bar_*.png"
@@ -57,3 +62,4 @@ terminal-border: "0"
 	height = 42
 	file = "menu.png"
 }
+
