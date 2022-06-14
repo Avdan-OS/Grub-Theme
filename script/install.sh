@@ -7,7 +7,8 @@ sudo cp ../src -r /boot/grub/themes/avdanos-grub-theme
 echo "Copying the theme to themes directory..."
 
 # Now the script will modify the /etc/default/grub file
-sudo cp grub -r /etc/default/grub
+sudo sed -i '$aGRUB_THEME="/boot/grub/themes/avdanos-grub-theme/theme.txt"' /etc/default/grub
+
 echo "Modifying the /etc/default/grub file"
 
 sudo grub-mkconfig -o /boot/grub/grub.cfg
