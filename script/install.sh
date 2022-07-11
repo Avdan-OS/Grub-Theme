@@ -36,7 +36,7 @@ prompt () {
 
 # Welcome message
 prompt -s "\n\t          ****************************\n\t          *  AvdanOS Bootloader theme  *\n\t          ****************************\n"
-prompt -s "\t\t \t Grub theme by Avdaos \n \n"
+prompt -s "\t\t \t Grub theme by AvdanOS \n \n"
 
 
 # checking command availability
