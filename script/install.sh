@@ -34,10 +34,6 @@ prompt () {
     esac
 }
 
-# Welcome message
-prompt -s "\n\t          ****************************\n\t          *  AvdanOS Bootloader theme  *\n\t          ****************************\n"
-prompt -s "\t\t \t Grub theme by AvdanOS \n \n"
-
 
 # checking command availability
 function has_command() {
@@ -54,7 +50,7 @@ if [ "$UID" -eq "$ROOT_UID" ]; then
     
     
     #copy theme
-    prompt -i "\nInstalling  theme...\n"
+    prompt -i "\nInstalling the theme...\n"
     cp -a ../src/* ${THEME_DIR}/${THEME_NAME}
     
     
@@ -70,19 +66,19 @@ if [ "$UID" -eq "$ROOT_UID" ]; then
     
     
     
-    prompt -i "\n finalizing your installation .......\n \n."
+    prompt -i "\n Finalizing your installation .......\n \n."
     # Update grub config
     echo -e "Updating grub config..."
     grub-mkconfig -o /boot/grub/grub.cfg
     
     
     # Success message
-    prompt -s "\n\t          ****************************\n\t          *  successfully installed  *\n\t          ****************************\n"
+    prompt -s "\n\t          ****************************\n\t          * Grub theme successfully installed!  *\n\t          ****************************\n"
     
 else
     
     # Error message
-    prompt -e "\n [ Error! ] -> Run me as root  \n \n "
+    prompt -e "\n [ Error! ] -> For installing the grub theme you have to be root! \n \n "
     
 fi
 
