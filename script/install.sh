@@ -63,6 +63,9 @@ if [ "$UID" -eq "$ROOT_UID" ]; then
 
     # Set kernel parameters for quiet boot
     sed -i 's/.*GRUB_CMDLINE_LINUX_DEFAULT.*/GRUB_CMDLINE_LINUX_DEFAULT="quiet splash vt.global_cursor_default=0 loglevel=2 rd.systemd.show_status=false rd.udev.log-priority=3 sysrq_always_enabled=1 fbcon=nodefer"/' /etc/default/grub
+    
+    # Disable grub kernel loading text
+    sed -i 's/.*$message.*/#/' /etc/grub.d/10_linux
 
         
     prompt -i "\n Finalizing your installation .......\n \n."
