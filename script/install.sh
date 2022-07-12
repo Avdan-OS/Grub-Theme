@@ -60,9 +60,11 @@ if [ "$UID" -eq "$ROOT_UID" ]; then
     
     grep "GRUB_THEME=" /etc/default/grub 2>&1 >/dev/null && sed -i '/GRUB_THEME=/d' /etc/default/grub
     echo "GRUB_THEME=\"${THEME_DIR}/${THEME_NAME}/theme.txt\"" >> /etc/default/grub
-    
-    
-    
+
+    # Set kernel parameters for quiet boot
+    sed -i 's/.*GRUB_CMDLINE_LINUX_DEFAULT.*/GRUB_CMDLINE_LINUX_DEFAULT="quiet splash vt.global_cursor_default=0 loglevel=2 rd.systemd.show_status=false rd.udev.log-priority=3 sysrq_always_enabled=1 fbcon=nodefer"/' /etc/default/grub
+
+        
     prompt -i "\n Finalizing your installation .......\n \n."
     # Update grub config
     echo -e "Updating grub config..."
